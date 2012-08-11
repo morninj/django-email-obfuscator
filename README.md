@@ -6,6 +6,10 @@ A Django template filter to protect email addresses from crawlers.
 Installation
 ------------
 
+Clone this repository:
+
+    git clone git://github.com/morninj/django-email-obfuscator.git
+
 Copy the `email_obfuscator` folder into your Django project's root directory.
 Then, add `email_obfuscator` to `INSTALLED_APPS` in `settings.py`:
 
