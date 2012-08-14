@@ -33,4 +33,4 @@ from spambots but rendering it readably in web browsers.
 You can also use the filter to create clickable `mailto` links:
 
     {% load email_obfuscator %}
-    <a href="mailto:{{'your@email.com'}}">Email me</a>
+    <a href="mailto:{{ 'your@email.com'|obfuscate }}">Email me</a>
