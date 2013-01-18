@@ -37,5 +37,7 @@ You can also use the filter to create clickable `mailto` links:
 
 ```python
 {% load email_obfuscator %}
-<a href="mailto:{{ 'your@email.com'|obfuscate }}">Email me</a>
+{{ 'your@email.com'|obfuscate_mailto }}
+#returns '<a href="mailto:your@email.com">your@email.com</a>' as an encoded string like
+#<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#114;&#64;&#101;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#114;&#64;&#101;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
 ```
