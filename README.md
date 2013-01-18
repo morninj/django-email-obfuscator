@@ -39,3 +39,9 @@ You can also use the filter to create clickable `mailto` links:
 {% load email_obfuscator %}
 <a href="mailto:{{ 'your@email.com'|obfuscate }}">Email me</a>
 ```
+
+Credits
+-------
+
+[Joseph Mornin](http://www.mornin.org/) is the main author. Thanks to 
+[Benjamin Banduhn](http://www.banduhn.com/) for optimizations and additions.
