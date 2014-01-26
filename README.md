@@ -42,8 +42,17 @@ You can also use the filter to create clickable `mailto` links:
 #<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#114;&#64;&#101;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#114;&#64;&#101;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
 ```
 
+And if you want to add a custom link text, use this filter:
+
+```python
+{% load email_obfuscator %}
+{{ 'your@email.com'|obfuscate_mailto:"my custom text" }}
+#returns '<a href="mailto:your@email.com">my custom text</a>' as an encoded string like
+#<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#114;&#64;&#101;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">my custom text</a>
+```
+
 Credits
 -------
 
-[Joseph Mornin](http://www.mornin.org/) is the main author. Thanks to 
+[Joseph Mornin](http://www.mornin.org/) is the main author. Thanks to
 [Benjamin Banduhn](http://www.banduhn.com/) for optimizations and additions.
