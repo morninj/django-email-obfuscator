@@ -6,12 +6,14 @@ register = template.Library()
 
 
 def obfuscate_string(value):
-    return ''.join(['&#%s;' % str(ord(char)) for char in value])
+    return ''.join(['&#%s;'.format(str(ord(char))) for char in value])
+
 
 @register.filter
 @stringfilter
 def obfuscate(value):
     return mark_safe(obfuscate_string(value))
+
 
 @register.filter
 @stringfilter
@@ -23,5 +25,5 @@ def obfuscate_mailto(value, text=False):
     else:
         link_text = mail
 
-    return mark_safe('<a href="%s%s">%s</a>' % (
+    return mark_safe('<a href="%s%s">%s</a>'.format(
         obfuscate_string('mailto:'), mail, link_text))
