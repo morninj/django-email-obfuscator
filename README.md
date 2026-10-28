@@ -28,6 +28,13 @@ Choose the obfuscation method in `settings.py`:
 EMAIL_OBFUSCATOR_METHOD = 'html_entity'  # default
 ```
 
+Available methods:
+
+* `html_entity` — encodes every character as an HTML entity.
+* `js_concatenation` — renders an empty element plus a small
+  `<script type="module">` that fills in the address at runtime. The
+  element is empty without JavaScript.
+
 Usage
 -----
 

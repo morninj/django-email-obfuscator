@@ -4,12 +4,14 @@ from django.template.defaultfilters import stringfilter
 from django.utils.safestring import mark_safe
 
 from . import html_entity
+from . import js_concatenation
 
 register = template.Library()
 
 
 METHODS = {
     'html_entity': html_entity,
+    'js_concatenation': js_concatenation,
 }
 
 def get_method():
