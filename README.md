@@ -19,6 +19,15 @@ INSTALLED_APPS = (
 )
 ```
 
+Configuration
+-------------
+
+Choose the obfuscation method in `settings.py`:
+
+```python
+EMAIL_OBFUSCATOR_METHOD = 'html_entity'  # default
+```
+
 Usage
 -----
 
@@ -53,11 +62,10 @@ And if you want to add a custom link text, use this filter:
 
 To add a subject line, separate it with a semicolon from the link text:
 
-
 ```python
 {% load email_obfuscator %}
-{{ 'your@email.com'|obfuscate_mailto:"my custom text" }}
-# returns '<a href="mailto:your@email.com">my custom text</a>' as an encoded string like
+{{ 'your@email.com'|obfuscate_mailto:"my custom text;my subject line" }}
+# returns '<a href="mailto:your@email.com?subject=my subject line">my custom text</a>' as an encoded string like
 # <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#114;&#64;&#101;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;?subject=my subject line">my custom text</a>
 ```
 
