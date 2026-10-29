@@ -14,5 +14,5 @@ def obfuscate_mailto(value, text=''):
             mail = mail + '?subject=' + subject
     else:
         link_text = mail
-        mailto = obfuscate("mailto:")
+    mailto = obfuscate("mailto:")
     return f'<a href="{mailto}{mail}">{link_text}</a>'
