@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(name='django-email-obfuscator',
     version='0.2.0',
@@ -8,6 +8,7 @@ setup(name='django-email-obfuscator',
     author_email='joseph@mornin.org',
     url='https://github.com/morninj/django-email-obfuscator',
     license='MIT',
+    python_requires='>=3.6',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
